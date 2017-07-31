@@ -7,17 +7,17 @@ function getAndPrintHTMLChunks () {
     path: '/http-examples/step1.html'
   };
 
-https.get(requestOptions, function(response){
-  response.setEncoding('utf8');
+  https.get(requestOptions, function(response){
+    response.setEncoding('utf8');
 
-  response.on('data', function(data){
-    console.log('Chunk received. ',data ,'\n');
-  });
+    response.on('data', function(data){
+      console.log('Chunk received. ',data ,'\n');
+    });
 
-  response.on('end', function(){
-    console.log('Response stream complete.')
+    response.on('end', function(){
+      console.log('Response stream complete.')
+    });
   });
-});
 
 }
 
